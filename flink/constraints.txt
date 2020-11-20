@@ -1,3 +1,0 @@
-# Ensure compatibility with flink
-# fbprophet would otherwise install pandas>=1.1.0
-pandas<=0.25.3,>=0.23.4
