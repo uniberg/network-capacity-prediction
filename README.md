@@ -41,6 +41,7 @@ docker-compose up -d
 docker-compose exec kibana ./scripts/import-objects.sh
 # Execute prediction job
 docker-compose exec jobmanager ./bin/flink run --python src/predict.py
+# Wait for the job to finish
 # Visit Kibana on http://localhost:5601 to checkout the results
 ```
 
