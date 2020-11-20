@@ -1,0 +1,12 @@
+---
+version: '3.2'
+
+services:
+  ################################### Jupyter Notebook
+  notebook:
+    image: uniberg/jupyter-notebook:prophet-0.7.1
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/data
+      - ./jupyter-notebooks/prophet-notebooks:/prophet-notebooks

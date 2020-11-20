@@ -16,16 +16,26 @@ TBW
 * Network capacity prediction: csv file --> Flink --> Kafka --> Logstash --> Elasticsearch
 
 ### Usage
+#### Jupyter Notebook
+```
+# Run the docker image
+docker-compose -f docker-compose.jupyter.yml up
+# Open URL in the logs containg the secret token
+# Open the notebook playground.ipynb
+# To terminate the notebook server hit ctrl-c
+```
 
 #### Flink Predictor
 To execute the predictor, please ensure to have at least assigned 8 GB of RAM and 4 cores to your docker daemon.
 If your hardware does not support this, decrease these values, but also decrease the `parallelism.default` of the jobmanager service and the `taskmanager.memory.process.size` of the taskmanager service in the `docker-compose.yml` file. Try to roughly keep a ratio from 1 to 3000 MB RAM.
 
 ```
-# Pull all images
+# Initial pull of images
 docker-compose pull
-# startup all the needed services.
-docker-compose up -d --build
+```
+```
+# Startup all the needed services.
+docker-compose up -d
 # Wait for services to startup and work
 # Import Kibana Dashboard
 docker-compose exec kibana ./scripts/import-objects.sh
@@ -39,3 +49,6 @@ To remove all docker entities and start over from scratch, execute the following
 ```
 docker-compose down --volumes
 ```
+
+### Docker Images
+The Docker images are build using the source from the following [Github repository](https://github.com/uniberg/network-capacity-prediction-docker.git).

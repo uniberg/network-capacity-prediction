@@ -93,7 +93,7 @@ source_ddl = """
     ) with (
         'connector.type' = 'filesystem',
         'format.type' = 'csv',
-        'connector.path' = '/opt/flink/input/generated-ws-hourly.csv'
+        'connector.path' = '/opt/flink/data/interface-data-hourly.csv'
     )
 """
 

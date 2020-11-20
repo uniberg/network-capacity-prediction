@@ -66,7 +66,6 @@ services:
     command: ["jobmanager"]
     volumes:
       - ./flink/src:/opt/flink/src
-      - ./flink/input:/opt/flink/input
     ports:
       - "8081:8081"
   taskmanager:
@@ -78,7 +77,7 @@ services:
     command: ["taskmanager"]
     volumes:
       - ./flink/src:/opt/flink/src
-      - ./flink/input:/opt/flink/input
+      - ./data:/opt/flink/data
   ################################### LOGSTASH
   logstash:
     image: docker.elastic.co/logstash/logstash:7.10.0
