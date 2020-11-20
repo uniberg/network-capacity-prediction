@@ -1,0 +1,2 @@
+- pipeline.id: prediction
+  path.config: "/usr/share/logstash/pipeline/prediction/"

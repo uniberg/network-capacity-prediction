@@ -1,0 +1,40 @@
+{
+  "index_patterns" : ["network-monitoring*"],
+  "mappings" : {
+    "properties" : {
+      "@timestamp": { "type": "date" },
+      "@version": { "type": "keyword" },
+
+      "host": { "type": "keyword" },
+      "interface": { "type": "keyword" },
+
+      "capacity": { "type": "long" },
+      "capacity_exceeded": { "type": "long" },
+
+      "throughput": { "type": "float" },
+      "throughput_lower": { "type": "float" },
+      "throughput_upper": { "type": "float" },
+      "additive_terms" : { "type" : "float" },
+      "additive_terms_lower" : { "type" : "float" },
+      "additive_terms_upper" : { "type" : "float" },
+      "daily" : { "type" : "float" },
+      "daily_lower" : { "type" : "float" },
+      "daily_upper" : { "type" : "float" },
+      "extra_regressors_additive" : { "type" : "float" },
+      "extra_regressors_additive_lower" : { "type" : "float" },
+      "extra_regressors_additive_upper" : { "type" : "float" },
+      "is_saturday" : { "type" : "float" },
+      "is_saturday_lower" : { "type" : "float" },
+      "is_saturday_upper" : { "type" : "float" },
+      "is_sunday" : { "type" : "float" },
+      "is_sunday_lower" : { "type" : "float" },
+      "is_sunday_upper" : { "type" : "float" },
+      "trend" : { "type" : "float" },
+      "trend_lower" : { "type" : "float" },
+      "trend_upper" : { "type" : "float" },
+      "yearly" : { "type" : "float" },
+      "yearly_lower" : { "type" : "float" },
+      "yearly_upper" : { "type" : "float" }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+################ Folder Patterns
+**/.cache/
+**/output/
+**/.ipynb_checkpoints/
+
+################ Folders
+.idea/
+__pycache__/
+.pytest_cache/
+docker-volumes/
+env/
+venv/
+
+################ File Patterns
+*.iml
+*.pyc
+
+################ Files
+.DS_Store
+.bookmarks
+.coverage
+.env
+.python-version
